@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{DC542E4F-CE13-4A24-803C-ED4CB167BA48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D2AF6448-BE21-4DB9-A415-EA20D1F12826}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingApi.UnitTests", "BookingApi.UnitTests\BookingApi.UnitTests.csproj", "{21ADDE6D-FC7C-44A0-9D1E-CB65275C2F06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC542E4F-CE13-4A24-803C-ED4CB167BA48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC542E4F-CE13-4A24-803C-ED4CB167BA48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC542E4F-CE13-4A24-803C-ED4CB167BA48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC542E4F-CE13-4A24-803C-ED4CB167BA48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21ADDE6D-FC7C-44A0-9D1E-CB65275C2F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21ADDE6D-FC7C-44A0-9D1E-CB65275C2F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21ADDE6D-FC7C-44A0-9D1E-CB65275C2F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21ADDE6D-FC7C-44A0-9D1E-CB65275C2F06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{21ADDE6D-FC7C-44A0-9D1E-CB65275C2F06} = {D2AF6448-BE21-4DB9-A415-EA20D1F12826}
+	EndGlobalSection
+EndGlobal

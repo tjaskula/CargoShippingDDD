@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DDDBookingApplication.Domain.Handling.CargoWasHandledEvent" Collapsed="true">
+    <Position X="7" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Handling\CargoWasHandledEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DDDBookingApplication.Domain.Handling.HandlingEvent">
+    <Position X="4" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAABAAAIAiAAUAQAAAAAAACAAAAAAEAA=</HashCode>
+      <FileName>Handling\HandlingEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DDDBookingApplication.Domain.Handling.HandlingHistory">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAACAAgAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Handling\HandlingHistory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_events" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Enum Name="DDDBookingApplication.Domain.Handling.HandlingEventType">
+    <Position X="7" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAoACAAAAQAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Handling\HandlingEventType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

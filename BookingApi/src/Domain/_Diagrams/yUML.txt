@@ -1,0 +1,12 @@
+﻿[Customer]<-role-*[Cargo]
+[Cargo]-goal>[Delivery Specification]
+[Cargo]-[Delivery History]
+[Delivery History]-*>[Handling Event]
+[Handling Event]*-handled->[Cargo]
+[Delivery Specification]-destination-[Location]
+[Carrier Movement]-from->[Location]
+[Carrier Movement]-to->[Location]
+[Carrier Movement]<0..1-*[Handling Event]
+
+
+http://yuml.me/diagram/scruffy/class/[Customer]<-role-*[Cargo], [Cargo]-goal>[Delivery Specification], [Cargo]-[Delivery History], [Delivery History]-*>[Handling Event], [Handling Event]*-handled->[Cargo], [Delivery Specification]-destination-[Location], [Carrier Movement]-from->[Location], [Carrier Movement]-to->[Location], [Carrier Movement]<0..1-*[Handling Event]

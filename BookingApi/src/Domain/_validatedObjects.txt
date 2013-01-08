@@ -1,0 +1,10 @@
+﻿ValueObject + Test
+Voyage + Test
+VoyageNumber + Test
+VoyageBuilder + Test
+UnLocode + Test
+TransportStatus (no test for that)
+TrackingId + Test
+Schedule + Test
+RoutingStatus (no test for that)
+RouteSpecification en cours !!!

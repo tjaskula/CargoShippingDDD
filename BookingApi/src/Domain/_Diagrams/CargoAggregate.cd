@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Voyage Aggregate">
+    <Position X="16.04" Y="5.774" Height="0.319" Width="1.161" />
+  </Comment>
+  <Comment CommentText="Location Aggregate">
+    <Position X="16.17" Y="2.107" Height="0.331" Width="1.245" />
+  </Comment>
+  <Comment CommentText="Handling Aggregate">
+    <Position X="15.989" Y="10.071" Height="0.331" Width="1.245" />
+  </Comment>
+  <Class Name="BookingApi.Domain.Cargo.TrackingId">
+    <Position X="1" Y="3" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAABAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAQiA=</HashCode>
+      <FileName>Cargo\TrackingId.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookingApi.Domain.Cargo.RouteSpecification">
+    <Position X="2.5" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Origin" Type="BookingApi.Domain.Location.Location">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.183" Y="0.05" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAACAAAAAQAAAAAAAAAABEAAAAAAgARiA=</HashCode>
+      <FileName>Cargo\RouteSpecification.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Destination" />
+      <Property Name="Origin" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BookingApi.Domain.Cargo.Leg">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Voyage" Type="BookingApi.Domain.Voyage.Voyage" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.5" Y="4.938" />
+        <Point X="15.75" Y="4.938" />
+        <Point X="15.75" Y="6.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="LoadLocation" Type="BookingApi.Domain.Location.Location" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.75" Y="3.5" />
+        <Point X="10.75" Y="2" />
+        <Point X="15.25" Y="2" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.018" Y="-0.296" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="UnloadLocation" Type="BookingApi.Domain.Location.Location" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.156" Y="3.5" />
+        <Point X="11.156" Y="3.125" />
+        <Point X="15.625" Y="3.125" />
+        <Point X="15.625" Y="2.027" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.091" Y="0.756" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIAAAAEAAAAAAAEAAAIAAQAAAAAAACAAACAAEAAAwiA=</HashCode>
+      <FileName>Cargo\Leg.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Voyage" />
+      <Property Name="LoadLocation" />
+      <Property Name="UnloadLocation" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BookingApi.Domain.Cargo.Itinerary">
+    <Position X="6.5" Y="2.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="InitialDepartureLocation" Type="BookingApi.Domain.Location.Location">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="0.008" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="FinalArrivalLocation" Type="BookingApi.Domain.Location.Location" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.562" Y="2.75" />
+        <Point X="7.562" Y="1.688" />
+        <Point X="15.25" Y="1.688" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.12" Y="0.018" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAEAAAAAAAAAIgAAAAAAAAAAAQIQAAAIAQiA=</HashCode>
+      <FileName>Cargo\Itinerary.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="InitialDepartureLocation" />
+      <Property Name="FinalArrivalLocation" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Legs" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BookingApi.Domain.Cargo.HandlingActivity">
+    <Position X="9.75" Y="7.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Location" Type="BookingApi.Domain.Location.Location" ManuallyRouted="true">
+      <Path>
+        <Point X="11.25" Y="8.783" />
+        <Point X="17.898" Y="8.783" />
+        <Point X="17.898" Y="1.5" />
+        <Point X="16.75" Y="1.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.252" Y="-7.084" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Voyage" Type="BookingApi.Domain.Voyage.Voyage" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.438" Y="7.75" />
+        <Point X="10.438" Y="7.375" />
+        <Point X="15.75" Y="7.375" />
+        <Point X="15.75" Y="6.759" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAIAAAAAEAAIAAAAEAAAAAAAAACAAAAAAQiA=</HashCode>
+      <FileName>Cargo\HandlingActivity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EventType" />
+      <Property Name="Location" />
+      <Property Name="Voyage" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BookingApi.Domain.Cargo.Delivery">
+    <Position X="3.75" Y="8" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="NextExpectedActivity" Type="BookingApi.Domain.Cargo.HandlingActivity" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.75" Y="9.438" />
+        <Point X="10.5" Y="9.438" />
+        <Point X="10.5" Y="8.905" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="RoutingStatus" Type="BookingApi.Domain.Cargo.RoutingStatus" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="8" />
+        <Point X="4" Y="6.051" />
+        <Point X="2.5" Y="6.051" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="LastKnownLocation" Type="BookingApi.Domain.Location.Location" ManuallyRouted="true">
+      <Path>
+        <Point X="5.75" Y="9.75" />
+        <Point X="18.367" Y="9.75" />
+        <Point X="18.367" Y="1.125" />
+        <Point X="16.75" Y="1.125" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.192" Y="0.14" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="CurrentVoyage" Type="BookingApi.Domain.Voyage.Voyage" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.562" Y="8" />
+        <Point X="5.562" Y="6.5" />
+        <Point X="15" Y="6.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.372" Y="0.141" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="TransportStatus" Type="BookingApi.Domain.Cargo.TransportStatus" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="9.937" />
+        <Point X="1.688" Y="9.937" />
+        <Point X="1.688" Y="9.681" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="LastEvent" Type="BookingApi.Domain.Handling.HandlingEvent" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.188" Y="10.194" />
+        <Point X="4.188" Y="10.875" />
+        <Point X="15" Y="10.875" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>CBAAQECgAARJBAAggAYwAAAAHAgAAAAAAAgAEGAURiA=</HashCode>
+      <FileName>Cargo\Delivery.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="NextExpectedActivity" />
+      <Property Name="RoutingStatus" />
+      <Property Name="LastKnownLocation" />
+      <Property Name="CurrentVoyage" />
+      <Property Name="TransportStatus" />
+      <Property Name="LastEvent" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BookingApi.Domain.Cargo.Cargo">
+    <Position X="4" Y="3" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Origine" Type="BookingApi.Domain.Location.Location" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.062" Y="3" />
+        <Point X="5.062" Y="1.312" />
+        <Point X="15.25" Y="1.312" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.1" Y="0.018" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAAAQAAAAAAAAAQEgAAAgAAAAIAAAIQAAAAAAAAEAAg=</HashCode>
+      <FileName>Cargo\Cargo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TrackingId" />
+      <Property Name="Origine" />
+      <Property Name="RouteSpecification" />
+      <Property Name="Itinerary" />
+      <Property Name="Delivery" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BookingApi.Domain.Location.Location">
+    <Position X="15.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAkgAAAAAQAAAAAAIAAAAAAAAAAAjA=</HashCode>
+      <FileName>Location\Location.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookingApi.Domain.Voyage.Voyage" Collapsed="true">
+    <Position X="15" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgEIAAAAAAEAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Voyage\Voyage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookingApi.Domain.Handling.HandlingEvent" Collapsed="true">
+    <Position X="15" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAIAAAABEAAIACAAEAQAAAAABACAAAAAAWiA=</HashCode>
+      <FileName>Handling\HandlingEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="BookingApi.Domain.Cargo.TransportStatus">
+    <Position X="1" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAMAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAADA=</HashCode>
+      <FileName>Cargo\TransportStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BookingApi.Domain.Cargo.RoutingStatus">
+    <Position X="1" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Cargo\RoutingStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BookingApi.Domain.Handling.HandlingEventType">
+    <Position X="6.5" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAoACAAAAQAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Handling\HandlingEventType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
